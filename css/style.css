@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200&display=swap'); 
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: black;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+nav{
+    width: 14%;
+    z-index: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    transition: ease-in-out;
+    
+}
+nav:hover{
+    transition: 0.5s;
+    box-shadow: 10px 10px 100px 50px black;
+}
+
+nav .logo{
+    margin: 10px;
+    width: 100%;
+}
+nav ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+nav ul a{
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: gray;
+    width: 100%;
+    margin: 18px auto;
+    border: none;
+    outline: none;
+    
+}   
+nav ul a:hover .menu,p{
+    transition: 0.2s;
+    color: white;
+    fill: white;
+    transform: translate(1px, 1px);
+}
+nav ul a .text{
+    position: absolute;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin-right: -70px;
+}
+nav ul a:nth-child(1) p:nth-child(2){
+    margin-right: -125px;
+    width: 100%;
+}
+nav ul a .menu{ 
+
+    fill: gray;
+}
+
+.container{
+    width: 86%;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto 0px auto auto;
+}
+.container .slider{
+    width: 100%;
+    position: relative;
+    
+}
+
+/* slider */
+.container .slider img{
+    opacity: 1;
+    background: #000;
+    width: 100%;
+    mask-image: linear-gradient(to bottom,black 50%,transparent);  
+    background-position: center center ;
+    object-fit: cover;
+}
+.container .slider .s-info{
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+}
+.container .slider .s-info .s-release{
+display: flex;
+align-items: center;
+text-align: center;
+gap: 8px;
+margin: 15px auto;
+}
+.container .slider .s-info .s-release h3{
+    font-family: "Poppins", sans-serif; 
+    width: 5px;
+    height: 5px;
+    background-color: gray;
+    border-radius: 10px;
+}
+.container .slider .s-info .s-watch button{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    width: 100%;
+    padding: 9px;
+    background: gray;
+    color: white;
+    opacity: 0.7;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    transition: 0.2s ease-in-out;
+}
+.container .slider .s-info .s-watch button:hover{
+    cursor: pointer;
+    background-color: rgb(139, 137, 137);
+    color: white;
+    opacity: 0.9;
+}
+
+/* latest releases */
+.container .latest-releases{
+    margin: 20px auto;
+    width:100%;
+}
+.container .latest-releases .l-info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .latest-releases .l-info h3{
+    font-weight: 600;
+}
+.container .latest-releases .l-info a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: auto 14px;
+    text-decoration: none;
+}
+.container .latest-releases .l-info a p{
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: gray;
+    /* margin: auto 14px; */
+    transition: 0.2s ease-in-out;
+}
+.container .latest-releases .l-info a .f{
+    fill: gray;
+}
+.container .latest-releases .l-info a:hover .f{
+    color: white;
+    fill: white;
+}
+.container .latest-releases .l-info a p:hover{
+    cursor: pointer; 
+    color: white;
+    fill: white;
+}
+.container .latest-releases .ms{
+    overflow-x: auto;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    margin: 10px auto;
+}
+.container .latest-releases .ms::-webkit-scrollbar{
+    display: none;
+}
+.container .latest-releases .ms .box{
+    width: 100%;
+}
+.container .latest-releases .ms .box img{
+    display: block;
+    width: 100%;
+    min-width: 50%;
+    width: 130px;   
+    height: 180px;
+    object-fit: cover;
+    background-position: center center;
+    border-radius: 8px;
+    transition: 0.2s ease-in-out;
+}
+.container .latest-releases .ms .box img:hover{
+    cursor: pointer;
+    transform: translate(1px,1px);
+}
+/* sports */
+.container .sports{
+    width: 100%;
+}
+.container .sports .s-info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .sports .s-infos h3{
+    font-weight: 600;
+}
+.container .sports .s-info a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: auto 14px;
+    text-decoration: none;
+}
+.container .sports .s-info a p{
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: gray;
+    /* margin: auto 14px; */
+    transition: 0.2s ease-in-out;
+}
+.container .sports .s-info a .f{
+    fill: gray;
+}
+.container .sports .s-info a:hover .f{
+    cursor: pointer;
+    color: white;
+    fill: white;
+}
+.container .sports .s-info a p:hover{
+    color: white;
+}
+.container .sports .s{
+    overflow-x: auto;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    margin: 10px auto;
+}
+.container .sports .s::-webkit-scrollbar{
+    display: none;
+}
+.container .sports .s .box{
+    width: 100%;
+    position: relative;
+}
+.container .sports .s .box img{
+    display: block;
+    width: max-content;   
+    height: 100px;
+    object-fit: cover;
+    background-position: center center;
+    border-radius: 8px;
+    transition: 0.2s ease-in-out;
+}
+.container .sports .s .box img:hover{
+    cursor: pointer;
+    transform: translate(1px, 1px);
+}
+.container .sports .s .box .play{
+    fill: whitesmoke;   
+    position: absolute;
+    bottom: 0;
+}
+
+/* movies */
+
+.container .movies{
+    width: 100%;
+    margin-top: 20px;
+}
+.container .movies .m-info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .movies .m-info h3{
+    font-weight: 600;
+}
+.container .movies .m-info a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: auto 14px;
+    text-decoration: none;
+}
+.container .movies .m-info a p{
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: gray;
+    /* margin: auto 14px; */
+    transition: 0.2s ease-in-out;
+}
+.container .movies .m-info a .f{
+    fill: gray;
+}
+.container .movies .m-info a:hover .f{
+    cursor: pointer;
+    color: white;
+    fill: white;
+}
+.container .movies .m-info a p:hover{
+    color: white;
+}
+.container .movies .m{
+    overflow-x: auto;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    margin: 10px auto;
+}
+.container .movies .m::-webkit-scrollbar{
+    display: none;
+}
+.container .movies .m .box{
+    width: 100%;
+    position: relative;
+}
+.container .movies .m .box img{
+    display: block;
+    width: 100%;
+    min-width: 50%;
+    width: 130px;   
+    height: 180px;
+    object-fit: cover;
+    background-position: center center;
+    border-radius: 8px;
+    transition: 0.2s ease-in-out;
+}
+.container .movies .m .box img:hover{
+    cursor: pointer;
+    transform: translate(1px, 1px);
+}
+.container .movies .m .box .play{
+    fill: whitesmoke;   
+    position: absolute;
+    bottom: 0;
+}
+
+/* Viedos */
+
+ .video{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* margin: auto;     */
+    position: relative;
+}
+.video video{
+    width: 100%;
+}
+.video .back{
+    /* background-color: aqua; */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+/* footer */
+.container footer{
+    margin-top: 50px;
+    width: 100%;
+    
+}
+.container footer .f-colum{
+    width: 100%;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    gap: 80px;
+    
+}
+.container footer h5{
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: rgb(226, 224, 224);
+}
+.container footer p{
+    cursor: pointer;
+    color: rgb(113, 129, 153);
+    font-size: 0.7rem;
+    margin: 7px auto;
+}
+.container footer .four img{
+    cursor: pointer;
+    margin: 9px 7px;
+}
+.container footer .s-colum{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.container footer .s-colum img{
+    cursor: pointer;
+    width: 130px;
+}
